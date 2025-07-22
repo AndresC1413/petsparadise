@@ -15,8 +15,8 @@ app.use(express.json());
 // Rutas
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
-const galleryRoutes = require('./routes/gallery');
-app.use('/api/gallery', galleryRoutes);
+const petRoutes = require('./routes/gallery');
+app.use('/api/pets', petRoutes);
 
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGO_URI, {

@@ -1,50 +1,50 @@
-const Product = require('../models/Product');
+const Pet = require('../models/Product');
 
-exports.createProduct = async (req, res) => {
+exports.createPet = async (req, res) => {
   try {
-    const product = new Product(req.body);
-    await product.save();
-    res.status(201).json(product);
+    const pet = new Pet(req.body);
+    await pet.save();
+    res.status(201).json(pet);
   } catch (error) {
-    res.status(500).json({ message: 'Error al crear el producto', error });
+    res.status(500).json({ message: 'Error al crear la mascota', error });
   }
 };
 
-exports.getProducts = async (req, res) => {
+exports.getPets = async (req, res) => {
   try {
-    const products = await Product.find();
-    res.json(products);
+    const pets = await Pet.find();
+    res.json(pets);
   } catch (error) {
-    res.status(500).json({ message: 'Error al obtener los productos', error });
+    res.status(500).json({ message: 'Error al obtener las mascotas', error });
   }
 };
 
-exports.getProductById = async (req, res) => {
+exports.getPetById = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
-    if (!product) return res.status(404).json({ message: 'Producto no encontrado' });
-    res.json(product);
+    const pet = await Pet.findById(req.params.id);
+    if (!pet) return res.status(404).json({ message: 'Mascota no encontrada' });
+    res.json(pet);
   } catch (error) {
-    res.status(500).json({ message: 'Error al obtener el producto', error });
+    res.status(500).json({ message: 'Error al obtener la mascota', error });
   }
 };
 
-exports.updateProduct = async (req, res) => {
+exports.updatePet = async (req, res) => {
   try {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!product) return res.status(404).json({ message: 'Producto no encontrado' });
-    res.json(product);
+    const pet = await Pet.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!pet) return res.status(404).json({ message: 'Mascota no encontrada' });
+    res.json(pet);
   } catch (error) {
-    res.status(500).json({ message: 'Error al actualizar el producto', error });
+    res.status(500).json({ message: 'Error al actualizar la mascota', error });
   }
 };
 
-exports.deleteProduct = async (req, res) => {
+exports.deletePet = async (req, res) => {
   try {
-    const product = await Product.findByIdAndDelete(req.params.id);
-    if (!product) return res.status(404).json({ message: 'Producto no encontrado' });
-    res.json({ message: 'Producto eliminado' });
+    const pet = await Pet.findByIdAndDelete(req.params.id);
+    if (!pet) return res.status(404).json({ message: 'Mascota no encontrada' });
+    res.json({ message: 'Mascota eliminada' });
   } catch (error) {
-    res.status(500).json({ message: 'Error al eliminar el producto', error });
+    res.status(500).json({ message: 'Error al eliminar la mascota', error });
   }
 }; 

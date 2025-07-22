@@ -1,21 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const galleryController = require('../controllers/galleryController');
+const petController = require('../controllers/galleryController');
 const { authMiddleware, isAdmin } = require('../middleware/authMiddleware');
 
-// Crear producto (solo usuarios autenticados)
-router.post('/', authMiddleware, galleryController.createProduct);
+// Crear mascota (solo usuarios autenticados)
+router.post('/', authMiddleware, petController.createPet);
 
-// Obtener todos los productos
-router.get('/', galleryController.getProducts);
+// Obtener todas las mascotas
+router.get('/', petController.getPets);
 
-// Obtener un producto por ID
-router.get('/:id', galleryController.getProductById);
+// Obtener una mascota por ID
+router.get('/:id', petController.getPetById);
 
-// Actualizar producto (solo admin)
-router.put('/:id', authMiddleware, isAdmin, galleryController.updateProduct);
+// Actualizar mascota (solo admin)
+router.put('/:id', authMiddleware, isAdmin, petController.updatePet);
 
-// Eliminar producto (solo admin)
-router.delete('/:id', authMiddleware, isAdmin, galleryController.deleteProduct);
+// Eliminar mascota (solo admin)
+router.delete('/:id', authMiddleware, isAdmin, petController.deletePet);
 
 module.exports = router; 

@@ -1,7 +1,23 @@
 const mongoose = require('mongoose');
 
-const productSchema = new mongoose.Schema({
+const petSchema = new mongoose.Schema({
   nombre: {
+    type: String,
+    required: true
+  },
+  especie: {
+    type: String,
+    required: true
+  },
+  raza: {
+    type: String,
+    required: true
+  },
+  edad: {
+    type: Number,
+    required: true
+  },
+  genero: {
     type: String,
     required: true
   },
@@ -13,16 +29,13 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  precio: {
-    type: Number,
-    required: true
-  },
-  categoria: {
+  estadoAdopcion: {
     type: String,
-    required: true
+    enum: ['disponible', 'adoptado'],
+    default: 'disponible'
   }
 }, {
   timestamps: true
 });
 
-module.exports = mongoose.model('Product', productSchema); 
+module.exports = mongoose.model('Pet', petSchema); 
