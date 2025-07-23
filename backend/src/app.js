@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Database connection
+const mongoURI = 'mongodb://localhost:27017/petsparadise';
 mongoose.connect(dbConfig.url, dbConfig.options)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
@@ -25,3 +26,8 @@ app.use('/api/users', usersRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+
+
+
+

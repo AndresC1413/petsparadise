@@ -1,16 +1,10 @@
-const mongoose = require('mongoose');
-
-const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('MongoDB connected successfully');
-    } catch (error) {
-        console.error('MongoDB connection failed:', error.message);
-        process.exit(1);
-    }
+const mongoURI = 'mongodb+srv://luisandrescn777:Pets2025@clusterpets.2qtt03j.mongodb.net/?retryWrites=true&w=majority&appName=Clusterpets';
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 };
 
-module.exports = connectDB;
+module.exports = {
+  url: mongoURI,
+  options,
+};

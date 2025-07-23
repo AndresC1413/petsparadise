@@ -11,3 +11,4 @@ router.put('/:id', petsController.updatePet.bind(petsController));
 router.delete('/:id', petsController.deletePet.bind(petsController));
 
 module.exports = router;
+

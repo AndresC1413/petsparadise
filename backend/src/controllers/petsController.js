@@ -59,4 +59,5 @@ class PetsController {
     }
 }
 
-export default PetsController;
+//export default PetsController;
+module.exports = PetsController;

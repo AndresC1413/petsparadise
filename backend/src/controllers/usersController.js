@@ -20,4 +20,6 @@ class UsersController {
     }
 }
 
-export default new UsersController();
+//export default new UsersController();
+
+module.exports = UsersController;
