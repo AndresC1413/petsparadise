@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.pet-card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card h2 {
+    margin: 0 0 10px;
+}
+
+.pet-card p {
+    margin: 5px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #4cae4c;
+}
+
+/* ...existing code... */
+
+/* Menú superior */
+.top-menu {
+    background: #4caf50;
+    padding: 10px 0;
+}
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.top-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botón para mostrar/ocultar barra lateral */
+/* ...existing code... */
+
+/* ...existing code... */
+
+#toggle-sidebar {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    z-index: 1001;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Mostrar el gif como fondo */
+    background-image: url('../img/clic.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    width: 50px;
+    height: 50px;
+    /* Oculta el texto del botón para mostrar solo el gif */
+    text-indent: -9999px;
+}
+
+/* ...existing code... */
+
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    transition: left 0.3s;
+    z-index: 1000;
+    padding-top: 80px;
+}
+.sidebar.active {
+    left: 0;
+}
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ...existing code... */
