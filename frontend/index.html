@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets Paradise</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Menú superior estático -->
     <header>
@@ -23,6 +25,16 @@
                 <li><a href="#add-pet">Agregar Mascota</a></li>
                 <li><a href="#users">Gestionar Usuarios</a></li>
             </ul>
+            <button class="huella-btn" aria-label="Huella" id="huellaBtn">
+                <img src="./img/huella.png" alt="Huella" />
+            </button>
+            <div class="huella-menu" id="huellaMenu">
+                <ul>
+                    <li><a href="#" id="loginOption">Login</a></li>
+                    <li><a href="#" id="registerOption">Registrarse</a></li>
+                    <li><a href="#" id="logoutOption">Salir</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -39,7 +51,7 @@
     </aside>
 
     <main>
-      
+
         <section id="crud-crear" style="display:none;">
             <h2>Crear Mascota</h2>
             <form id="form-crear-pet">
@@ -64,30 +76,32 @@
                 <button type="submit">Eliminar</button>
             </form>
         </section>
-        
-<!-- Carrusel de imágenes dinámico -->
-<section id="pets-carousel-section">
-  <h2>No importa lo que hagas o como le trates, el amor de los perros es infinito, su cariño es inmenso y su fidelidad es incondicional.</h2>
-  <div class="carousel-container" id="carousel">
-    <div class="carousel-track" id="carouselTrack">
-        <img src="./img/pets/01.jpg" alt="Pet 1">
-        <img src="./img/pets/02.jpg" alt="Pet 2">
-        <img src="./img/pets/03.jpg" alt="Pet 3">
-        <img src="./img/pets/04.jpg" alt="Pet 4">
-        <img src="./img/pets/05.jpg" alt="Pet 5">
-        <img src="./img/pets/06.jpg" alt="Pet 6">
-        <img src="./img/pets/07.jpg" alt="Pet 7">
-        <img src="./img/pets/08.jpg" alt="Pet 8">
-        <img src="./img/pets/09.jpg" alt="Pet 9">
-        <img src="./img/pets/10.jpg" alt="Pet 10">
-      <!-- Agrega más imágenes si tienes -->
-    </div>
-  </div>
-</section>
+
+        <!-- Carrusel de imágenes dinámico -->
+        <section id="pets-carousel-section">
+            <h2>No importa lo que hagas o como le trates, el amor de los perros es infinito, su cariño es inmenso y su
+                fidelidad es incondicional.</h2>
+            <div class="carousel-container" id="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <img src="./img/pets/01.jpg" alt="Pet 1">
+                    <img src="./img/pets/02.jpg" alt="Pet 2">
+                    <img src="./img/pets/03.jpg" alt="Pet 3">
+                    <img src="./img/pets/04.jpg" alt="Pet 4">
+                    <img src="./img/pets/05.jpg" alt="Pet 5">
+                    <img src="./img/pets/06.jpg" alt="Pet 6">
+                    <img src="./img/pets/07.jpg" alt="Pet 7">
+                    <img src="./img/pets/08.jpg" alt="Pet 8">
+                    <img src="./img/pets/09.jpg" alt="Pet 9">
+                    <img src="./img/pets/10.jpg" alt="Pet 10">
+                    <!-- Agrega más imágenes si tienes -->
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Pets Paradise</p>
     </footer>
     <script src="js/main.js"></script>
 </body>
+
 </html>

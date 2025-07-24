@@ -165,3 +165,21 @@ document.addEventListener('DOMContentLoaded', function () {
     animate();
   }
 });
+// Menú desplegable de la huella
+document.addEventListener('DOMContentLoaded', function () {
+  const huellaBtn = document.getElementById('huellaBtn');
+  const huellaMenu = document.getElementById('huellaMenu');
+
+  if (huellaBtn && huellaMenu) {
+    huellaBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      huellaMenu.style.display = huellaMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!huellaMenu.contains(e.target) && e.target !== huellaBtn) {
+        huellaMenu.style.display = 'none';
+      }
+    });
+  }
+});

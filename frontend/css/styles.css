@@ -102,17 +102,27 @@ footer {
 }
 
 /* Menú superior */
-.top-menu {
-    background: #4caf50;
-    padding: 10px 0;
-}
 .top-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-menu {
+     position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2ecc40; /* o el color de tu barra */
+  padding: 0 20px;
+}
+
+.top-menu li {
+  margin: 0 18px;
 }
 .top-menu a {
     color: #fff;
@@ -127,7 +137,7 @@ footer {
 
 #toggle-sidebar {
     position: fixed;
-    top: 40px;
+    top: 45px;
     left: 10px;
     z-index: 1001;
     background: #4caf50;
@@ -219,4 +229,63 @@ header {
   box-shadow: 0 2px 8px #0002;
   background: #fff;
   object-fit: cover;
+}
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2ecc40; /* verde, ajusta si tu barra usa otro color */
+  padding: 0 20px;
+    position: relative; /* <-- Esto es clave */
+}
+
+.huella-menu {
+  display: none;
+  position: absolute;
+  top: 60px;    /* Ajusta según la altura de tu barra */
+  right: 20px;  /* Alineado al botón huella */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #0002;
+  z-index: 2000;
+  min-width: 160px;
+  padding: 8px 0;
+    border: 1px solid #2ecc40;
+}
+
+.huella-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+.huella-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #2ecc40; /* Verde visible sobre blanco */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.huella-menu a:hover {
+  background: #e8f5e9;
+}
+
+.huella-btn img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+/* Efecto de crecer al hacer clic en el botón de huella */
+.huella-btn:active img {
+  transform: scale(1.4);
+  transition: transform 0.15s;
+}
+
+.huella-btn img {
+  transition: transform 0.15s;
 }
