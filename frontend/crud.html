@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Paradise</title>
+    <title>CRUD Mascotas | Pets Paradise</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Menú superior estático -->
     <header>
-        <h1>Bienvenido a Pets Paradise</h1>
+        <h1>CRUD de Mascotas</h1>
         <nav class="top-menu">
             <ul>
                 <li class="dropdown">
@@ -25,11 +24,7 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Botón para mostrar/ocultar la barra lateral -->
     <button id="toggle-sidebar" aria-label="Mostrar/Ocultar menú lateral">&#9776;</button>
-
-    <!-- Barra lateral oculta/visible -->
     <aside id="sidebar" class="sidebar">
         <nav>
             <ul id="sidebar-menu">
@@ -37,9 +32,7 @@
             </ul>
         </nav>
     </aside>
-
     <main>
-      
         <section id="crud-crear" style="display:none;">
             <h2>Crear Mascota</h2>
             <form id="form-crear-pet">
@@ -64,30 +57,14 @@
                 <button type="submit">Eliminar</button>
             </form>
         </section>
-        
-<!-- Carrusel de imágenes dinámico -->
-<section id="pets-carousel-section">
-  <h2>No importa lo que hagas o como le trates, el amor de los perros es infinito, su cariño es inmenso y su fidelidad es incondicional.</h2>
-  <div class="carousel-container" id="carousel">
-    <div class="carousel-track" id="carouselTrack">
-        <img src="./img/pets/01.jpg" alt="Pet 1">
-        <img src="./img/pets/02.jpg" alt="Pet 2">
-        <img src="./img/pets/03.jpg" alt="Pet 3">
-        <img src="./img/pets/04.jpg" alt="Pet 4">
-        <img src="./img/pets/05.jpg" alt="Pet 5">
-        <img src="./img/pets/06.jpg" alt="Pet 6">
-        <img src="./img/pets/07.jpg" alt="Pet 7">
-        <img src="./img/pets/08.jpg" alt="Pet 8">
-        <img src="./img/pets/09.jpg" alt="Pet 9">
-        <img src="./img/pets/10.jpg" alt="Pet 10">
-      <!-- Agrega más imágenes si tienes -->
-    </div>
-  </div>
-</section>
+        <section id="crud-listar">
+            <h2>Lista de Mascotas</h2>
+            <div id="crud-lista-mascotas"></div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Pets Paradise</p>
     </footer>
     <script src="js/main.js"></script>
 </body>
-</html>
+</html> 

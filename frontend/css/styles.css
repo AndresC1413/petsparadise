@@ -155,17 +155,18 @@ footer {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -220px;
+    left: 0; /* Siempre desde el borde izquierdo */
     width: 200px;
     height: 100%;
     background: #333;
     color: #fff;
-    transition: left 0.3s;
+    transition: transform 0.3s;
     z-index: 1000;
     padding-top: 80px;
+    transform: translateX(-220px); /* Oculta la barra fuera de pantalla */
 }
 .sidebar.active {
-    left: 0;
+    transform: translateX(0); /* Muestra la barra desde el borde izquierdo */
 }
 .sidebar nav ul {
     list-style: none;
@@ -178,4 +179,44 @@ footer {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+}
+
+/* Separar el contenido principal de la barra lateral */
+main {
+    margin-left: 220px;
+}
+
+header {
+    margin-left: 0; /* Sin margen izquierdo */
+}
+
+.top-menu {
+    margin-left: 0; /* Sin margen izquierdo */
+}
+/* Carrusel de imágenes */
+.carousel-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 30px auto 20px auto;
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.2s linear;
+  will-change: transform;
+  height: 220px;
+  align-items: center;
+}
+.carousel-track img {
+  height: 200px;
+  margin: 0 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  background: #fff;
+  object-fit: cover;
 }

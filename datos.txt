@@ -1,6 +1,7 @@
 npm init -y
 npm install express
 npm install cors
+  si hay vulnerabilidades >> npm audit fix --force
 npm install node -g nodemon 
 npm install -save -dev nodemon
 
