@@ -12,7 +12,14 @@
         <h1>Bienvenido a Pets Paradise</h1>
         <nav class="top-menu">
             <ul>
-                <li><a href="#pets">Ver Mascotas</a></li>
+                <li class="dropdown">
+                    <a href="#pets" class="dropbtn">Mascotas</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#adopcion">Adopción</a></li>
+                        <li><a href="#callejeras">Callejeras</a></li>
+                        <li><a href="#clinica">Clínica</a></li>
+                    </ul>
+                </li>
                 <li><a href="#add-pet">Agregar Mascota</a></li>
                 <li><a href="#users">Gestionar Usuarios</a></li>
             </ul>
@@ -34,15 +41,27 @@
     </aside>
 
     <main>
-        <section id="pets">
-            <h2>Catálogo de Mascotas</h2>
-            <div id="pet-list"></div>
+        <section id="pets" style="display: flex; align-items: flex-start; gap: 40px;">
+            <div>
+                <h2>Catálogo de Mascotas</h2>
+                <div id="pet-list"></div>
+            </div>
+            <div style="min-width: 250px;">
+                <h3>Consultar Mascotas</h3>
+                <button id="consultar-mascotas" class="button">Consultar</button>
+                <div id="consulta-lista"></div>
+            </div>
         </section>
         <section id="add-pet">
             <h2>Agregar una Nueva Mascota</h2>
             <form id="pet-form">
                 <input type="text" id="pet-name" placeholder="Nombre de la Mascota" required>
                 <input type="text" id="pet-type" placeholder="Tipo de Mascota" required>
+                <input type="text" id="pet-breed" placeholder="Tipo de Raza" required>
+                <input type="text" id="pet-age" placeholder="Edad" required>
+                <input type="text" id="pet-description" placeholder="Descripción" required>
+                <input type="text" id="pet-owner" placeholder="Situación" required>
+
                 <button type="submit">Agregar Mascota</button>
             </form>
         </section>

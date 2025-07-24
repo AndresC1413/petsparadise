@@ -1,3 +1,41 @@
+/* Dropdown menu para Mascotas */
+.dropdown {
+    position: relative;
+}
+.dropbtn {
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4caf50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    margin-top: 10px;
+    border-radius: 0 0 8px 8px;
+    padding: 0;
+    left: 0;
+}
+.dropdown-content li {
+    list-style: none;
+}
+.dropdown-content li a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+.dropdown-content li a:hover {
+    background-color: #388e3c;
+}
+.dropdown .dropdown-content {
+    display: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -62,8 +100,6 @@ footer {
 .button:hover {
     background: #4cae4c;
 }
-
-/* ...existing code... */
 
 /* Menú superior */
 .top-menu {
@@ -143,5 +179,3 @@ footer {
     text-decoration: none;
     font-size: 18px;
 }
-
-/* ...existing code... */

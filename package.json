@@ -1,0 +1,20 @@
+{
+  "name": "petsparadise",
+  "version": "1.0.0",
+  "description": "Pets Paradise es una aplicación web que funciona como un catálogo de mascotas, permitiendo a los usuarios ver, agregar, actualizar y eliminar registros de mascotas. La aplicación está construida con un backend en Node.js usando Express y MongoDB para el almacenamiento de datos, y un frontend sencillo en HTML/CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresC1413/petsparadise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresC1413/petsparadise/issues"
+  },
+  "homepage": "https://github.com/AndresC1413/petsparadise#readme"
+}

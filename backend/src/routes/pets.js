@@ -1,8 +1,10 @@
 const express = require('express');
+
 const PetsController = require('../controllers/petsController');
+const Pet = require('../models/pet');
 
 const router = express.Router();
-const petsController = new PetsController();
+const petsController = new PetsController(Pet);
 
 router.post('/', petsController.createPet.bind(petsController));
 router.get('/', petsController.getPets.bind(petsController));
@@ -11,4 +13,5 @@ router.put('/:id', petsController.updatePet.bind(petsController));
 router.delete('/:id', petsController.deletePet.bind(petsController));
 
 module.exports = router;
+
 
