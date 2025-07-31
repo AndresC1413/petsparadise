@@ -204,6 +204,18 @@ header {
     margin-left: 0; /* Sin margen izquierdo */
 }
 /* Carrusel de imágenes */
+#pets-carousel-section {
+  margin-bottom: 20px;
+}
+
+/* Secciones CRUD */
+#crud-crear,
+#crud-editar,
+#crud-eliminar,
+#crud-listar {
+  margin-bottom: 20px;
+}
+
 .carousel-container {
   width: 100%;
   max-width: 1500px;

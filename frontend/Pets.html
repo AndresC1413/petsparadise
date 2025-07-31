@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Mascotas | Pets Paradise</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
-        <h1>CRUD de Mascotas</h1>
         <nav class="top-menu">
             <ul>
                 <li class="dropdown">
-                    <a href="#pets" class="dropbtn">Mascotas</a>
                     <ul class="dropdown-content">
-                        <li><a href="#adopcion">Adopción</a></li>
-                        <li><a href="#callejeras">Callejeras</a></li>
                         <li><a href="#clinica">Clínica</a></li>
                     </ul>
                 </li>
@@ -25,11 +19,29 @@
                 <li><a href="#users">Gestionar Usuarios</a></li>
             </ul>
         </nav>
-        
     </header>
 
     <main>
-        
+        <!-- Carrusel primero -->
+        <section id="pets-carousel-section">
+            <h2>No importa lo que hagas o como le trates, el amor de los perros es infinito, su cariño es inmenso y su fidelidad es incondicional.</h2>
+            <div class="carousel-container" id="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <img src="./img/pets/01.jpg" alt="Pet 1">
+                    <img src="./img/pets/02.jpg" alt="Pet 2">
+                    <img src="./img/pets/03.jpg" alt="Pet 3">
+                    <img src="./img/pets/04.jpg" alt="Pet 4">
+                    <img src="./img/pets/05.jpg" alt="Pet 5">
+                    <img src="./img/pets/06.jpg" alt="Pet 6">
+                    <img src="./img/pets/07.jpg" alt="Pet 7">
+                    <img src="./img/pets/08.jpg" alt="Pet 8">
+                    <img src="./img/pets/09.jpg" alt="Pet 9">
+                    <img src="./img/pets/10.jpg" alt="Pet 10">
+                </div>
+            </div>
+        </section>
+
+        <!-- CRUD después -->
         <section id="crud-crear" style="display:none;">
             <h2>Crear Mascota</h2>
             <form id="form-crear-pet">
@@ -64,5 +76,4 @@
     </footer>
     <script src="js/main.js"></script>
 </body>
-
 </html>
