@@ -1,4 +1,5 @@
 /* Dropdown menu para Mascotas */
+
 .dropdown {
     position: relative;
 }
@@ -8,7 +9,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #4caf50;
+    background-color: #004030;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
@@ -28,7 +29,7 @@
     font-weight: normal;
 }
 .dropdown-content li a:hover {
-    background-color: #388e3c;
+    background-color: #004030;
 }
 .dropdown .dropdown-content {
     display: none;
@@ -37,6 +38,7 @@
     display: block;
 }
 body {
+  background-color: #DCD0A8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -44,7 +46,7 @@ body {
 }
 
 header {
-    background: #35424a;
+    background: #004030;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
@@ -91,14 +93,14 @@ footer {
     display: inline-block;
     padding: 10px 15px;
     margin: 5px 0;
-    background: #5cb85c;
+    background: #4A9782;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .button:hover {
-    background: #4cae4c;
+    background: #3c7e6c;
 }
 
 /* Menú superior */
@@ -108,16 +110,17 @@ footer {
   align-items: center;
   flex: 1;
   list-style: none;
-  padding: 0;
+  padding: 0px;
   margin: 0;
 }
 
 .top-menu {
-     position: relative;
+  position: relative;
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2ecc40; /* o el color de tu barra */
+  background: #4A9782; /* o el color de tu barra */
   padding: 0 20px;
 }
 
@@ -137,44 +140,41 @@ footer {
 
 #toggle-sidebar {
     position: fixed;
-    top: 45px;
+    top: 25px;
     left: 10px;
-    z-index: 1001;
-    background: #4caf50;
+    z-index: 2000;
+    width: 50px;
+    height: 50px;
+    background: #4A9782;
     color: #fff;
     border: none;
     padding: 10px 15px;
     font-size: 22px;
     cursor: pointer;
     border-radius: 5px;
-    /* Mostrar el gif como fondo */
     background-image: url('../img/clic.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30px 30px;
-    width: 50px;
-    height: 50px;
-    /* Oculta el texto del botón para mostrar solo el gif */
     text-indent: -9999px;
 }
-
-/* ...existing code... */
-
 
 /* Barra lateral */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0; /* Siempre desde el borde izquierdo */
     width: 200px;
-    height: 100%;
+    height: calc(100% - 60px); 
     background: #333;
     color: #fff;
     transition: transform 0.3s;
     z-index: 1000;
-    padding-top: 80px;
-    transform: translateX(-220px); /* Oculta la barra fuera de pantalla */
+    padding-top: 20px;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
 }
+
 .sidebar.active {
     transform: translateX(0); /* Muestra la barra desde el borde izquierdo */
 }
@@ -208,46 +208,117 @@ header {
   margin-bottom: 20px;
 }
 
+
+/* .container-mision {
+  background-color: #004030;
+  color: #DCD0A8;
+  padding: 8rem 4rem;
+  text-align: center;
+}
+
+.container-mision h2 {
+ 
+} */
+
 /* Secciones CRUD */
 #crud-crear,
 #crud-editar,
-#crud-eliminar,
-#crud-listar {
+#crud-eliminar {
+  display: block;
+  width: 100%;
+  max-width: 100%; /* REVISAR */
+  margin: 12px;
+  border: 2px solid #4A9782;
+  border-radius: 6px;
+  font-size: 20px;
   margin-bottom: 20px;
+  background-color: #004030;
+  padding: 60px 40px;
+  color: #DCD0A8;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-container {
-  width: 100%;
-  max-width: 1500px;
-  margin: 30px auto 20px auto;
-  overflow: hidden;
-  position: relative;
-  height: 220px;
-  background: #f8f8f8;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #0001;
+#crud-crear input:focus,
+#crud-editar input:focus,
+#crud-eliminar input:focus {
+  border-color: #DCD0A8;
+  outline: none;
+  box-shadow: 0 0 6px #DCD0A8;
 }
+
+#crud-crear button,
+#crud-editar button,
+#crud-eliminar button {
+  background-color: #4A9782;
+  color: #FFF9E5;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  /* transition: background 0.3s ease, transform 0.2s ease; */
+}
+
+#crud-crear button:hover,
+#crud-editar button:hover,
+#crud-eliminar button:hover {
+  background-color: #3c7e6c;
+  transform: scale(1.02);
+}
+
+#crud-crear h2,
+#crud-editar h2,
+#crud-eliminar h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #FFF9E5;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 8px;
+}
+.carousel-container {
+  width: 100vw; /* ⬅️ Ocupa todo el ancho de la pantalla */
+  margin: 0;     /* ⬅️ Elimina márgenes que lo centran */
+  padding: 0;
+  overflow-x: hidden;
+  background: #f8f8f8;
+  border-radius: 0; /* si quieres bordes rectos */
+  box-shadow: none;
+  height: 260px;
+}
+
 .carousel-track {
   display: flex;
-  transition: transform 0.2s linear;
-  will-change: transform;
-  height: 220px;
+  gap: 20px;
+  padding: 20px;
+  height: 240px;
   align-items: center;
+  transition: transform 0.3s ease;
 }
+
 .carousel-track img {
   height: 200px;
-  margin: 0 14px;
+  width: auto;
   border-radius: 12px;
-  box-shadow: 0 2px 8px #0002;
-  background: #fff;
   object-fit: cover;
+  box-shadow: 0 2px 8px #0002;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
 }
 
 .top-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2ecc40; /* verde, ajusta si tu barra usa otro color */
+  background: #4A9782; /* verde, ajusta si tu barra usa otro color */
   padding: 0 20px;
     position: relative; /* <-- Esto es clave */
 }
@@ -263,7 +334,7 @@ header {
   z-index: 2000;
   min-width: 160px;
   padding: 8px 0;
-    border: 1px solid #2ecc40;
+  border: 1px solid #DCD0A8;
 }
 
 .huella-btn {
@@ -278,7 +349,7 @@ header {
 .huella-menu a {
   display: block;
   padding: 12px 20px;
-  color: #2ecc40; /* Verde visible sobre blanco */
+  color: #4A9782; /* Verde visible sobre blanco */
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -301,4 +372,18 @@ header {
 
 .huella-btn img {
   transition: transform 0.15s;
+}
+
+.frase-animales {
+  max-width: 1000px;
+  margin: 40px auto 20px auto;
+  padding: 20px 30px;
+  /* background-color: #FFF9E5;  */
+  color: #004030;             
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  /* border-radius: 12px;
+  box-shadow: 0 4px 12px #00000015; */
+  line-height: 1.6;
 }
